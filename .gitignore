@@ -11,3 +11,5 @@ coverage/
 
 # Specs ficam no workspace local (../docs), nao neste repo
 /docs/
+
+*storybook.log
