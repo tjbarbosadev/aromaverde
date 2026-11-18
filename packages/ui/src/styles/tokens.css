@@ -1,0 +1,57 @@
+:root {
+  --color-sage: #5f7f62;
+  --color-sage-deep: #3f5a43;
+  --color-earth: #8a6a4a;
+  --color-cream: #eef2eb;
+  --color-ink: #1b221c;
+  --color-smoke: #8b958c;
+  --color-surface: #f7faf5;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+}
+
+@theme {
+  --color-sage: #5f7f62;
+  --color-sage-deep: #3f5a43;
+  --color-earth: #8a6a4a;
+  --color-cream: #eef2eb;
+  --color-ink: #1b221c;
+  --color-smoke: #8b958c;
+  --color-surface: #f7faf5;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+}
