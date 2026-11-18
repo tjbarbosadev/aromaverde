@@ -1,24 +1,24 @@
 import { Hero } from '../templates/Hero'
-import { HomeAbout } from '../templates/HomeAbout'
-import { HomeBlog } from '../templates/HomeBlog'
-import { HomeCategories } from '../templates/HomeCategories'
+import { HomeContact } from '../templates/HomeContact'
+import { HomeEssence } from '../templates/HomeEssence'
 import { HomeFeatured } from '../templates/HomeFeatured'
-import { HomeNewsletter } from '../templates/HomeNewsletter'
-import { HomePartners } from '../templates/HomePartners'
-import { HomeTestimonials } from '../templates/HomeTestimonials'
+import { HomeProductLines } from '../templates/HomeProductLines'
+import { HomeStoryTeaser } from '../templates/HomeStoryTeaser'
 
+/**
+ * Home alinhada ao doc da marca (§9):
+ * Início → produtos → essência → história → contato.
+ * Sem blog, newsletter, parceiros ou depoimentos.
+ */
 export function HomePage() {
-  // Seo entra na A8.
   return (
     <>
       <Hero />
-      <HomePartners />
-      <HomeCategories />
-      <HomeAbout />
+      <HomeProductLines />
       <HomeFeatured />
-      <HomeTestimonials />
-      <HomeBlog />
-      <HomeNewsletter />
+      <HomeEssence />
+      <HomeStoryTeaser />
+      <HomeContact />
     </>
   )
 }

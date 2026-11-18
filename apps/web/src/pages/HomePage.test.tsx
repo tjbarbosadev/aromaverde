@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom/vitest'
 import { cleanup, render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import { afterEach, describe, expect, it } from 'vitest'
 import App from '../app/App'
 
@@ -8,9 +9,11 @@ afterEach(cleanup)
 
 function renderAt(path: string) {
   return render(
-    <MemoryRouter initialEntries={[path]}>
-      <App />
-    </MemoryRouter>,
+    <HelmetProvider>
+      <MemoryRouter initialEntries={[path]}>
+        <App />
+      </MemoryRouter>
+    </HelmetProvider>,
   )
 }
 
@@ -18,7 +21,10 @@ describe('HomePage', () => {
   it('mostra headline do hero e o CTA para /loja', () => {
     renderAt('/')
     expect(
-      screen.getByRole('heading', { level: 1, name: /Sinta o ritual/i }),
+      screen.getByRole('heading', {
+        level: 1,
+        name: /Mais do que acender um incenso/i,
+      }),
     ).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Explorar a loja/i })).toHaveAttribute(
       'href',
@@ -26,45 +32,22 @@ describe('HomePage', () => {
     )
   })
 
-  it('marca aparece no header e no footer (sem eyebrow)', () => {
-    renderAt('/')
-    expect(
-      screen.getByRole('link', { name: /Aroma Verde — início/i }),
-    ).toBeInTheDocument()
-    const brandMentions = screen.getAllByText('Aroma Verde')
-    expect(brandMentions.length).toBeGreaterThanOrEqual(2)
-  })
-
-  it('imagem do hero tem alt descritivo', () => {
-    renderAt('/')
-    expect(screen.getByRole('img', { name: /cerâmica e ritual/i })).toBeInTheDocument()
-  })
-
-  it('compõe as seções da home na ordem do Figma', () => {
+  it('compõe seções alinhadas ao doc da marca', () => {
     renderAt('/')
     const titles = [
-      'Eles confiam em nós',
-      'Categorias',
-      'Sobre nós',
+      'Nossos produtos',
       /Incensos feitos à mão/i,
-      'O que dizem sobre nós',
-      /Últimos rituais/i,
-      'Receba novidades',
+      'Nossa essência',
+      'Nossa história',
+      'Contato',
     ].map((name) => screen.getByRole('heading', { level: 2, name }))
     for (let i = 1; i < titles.length; i++) {
       expect(
-        titles[i - 1].compareDocumentPosition(titles[i]) & Node.DOCUMENT_POSITION_FOLLOWING,
+        titles[i - 1].compareDocumentPosition(titles[i]) &
+          Node.DOCUMENT_POSITION_FOLLOWING,
       ).toBeTruthy()
     }
-  })
-
-  it('categorias linkam para /loja com intenção e "Ver todos" para /loja', () => {
-    renderAt('/')
-    expect(screen.getByRole('link', { name: /Acolher/ })).toHaveAttribute(
-      'href',
-      '/loja?intencao=acolher',
-    )
-    expect(screen.getByRole('link', { name: 'Ver todos' })).toHaveAttribute('href', '/loja')
+    expect(screen.queryByRole('heading', { name: /blog|newsletter|parceiro|depoimento/i })).toBeNull()
   })
 
   it('não expõe Sign Up / Login', () => {
@@ -72,16 +55,25 @@ describe('HomePage', () => {
     expect(screen.queryByText(/sign up|login|entrar/i)).not.toBeInTheDocument()
   })
 
-  it('nav expõe Início, Loja e Sobre', () => {
-    renderAt('/')
-    const nav = screen.getByRole('navigation', { name: /principal$/i })
-    expect(nav).toHaveTextContent(/Início/)
-    expect(screen.getAllByRole('link', { name: 'Loja' })[0]).toHaveAttribute('href', '/loja')
-    expect(screen.getAllByRole('link', { name: 'Sobre' })[0]).toHaveAttribute('href', '/sobre')
+  it('loja lista produtos do catálogo', async () => {
+    renderAt('/loja')
+    expect(
+      await screen.findByRole('heading', { level: 1, name: /Nossos produtos/i }),
+    ).toBeInTheDocument()
+    expect(await screen.findByText('Raio de Sol')).toBeInTheDocument()
   })
 
-  it('rota /loja existe', () => {
-    renderAt('/loja')
-    expect(screen.getByRole('heading', { level: 1, name: 'Loja' })).toBeInTheDocument()
+  it('PDP carrega por slug', async () => {
+    renderAt('/produto/raio-de-sol')
+    expect(
+      await screen.findByRole('heading', { level: 1, name: 'Raio de Sol' }),
+    ).toBeInTheDocument()
+  })
+
+  it('sobre publica a narrativa', () => {
+    renderAt('/sobre')
+    expect(
+      screen.getByRole('heading', { level: 1, name: /Nossa história/i }),
+    ).toBeInTheDocument()
   })
 })
