@@ -1,12 +1,14 @@
-import { ping } from '@aromaverde/ui'
+import { Heading, Text } from '@aromaverde/ui'
 
 export default function App() {
   return (
     <main className="min-h-svh px-8 py-12">
-      <h1 className="font-display text-4xl font-bold text-sage-deep">
+      <Heading level={1} className="font-bold text-sage-deep">
         Aroma Verde
-      </h1>
-      <p className="mt-2 text-smoke">{ping()}</p>
+      </Heading>
+      <Text className="mt-2" tone="smoke">
+        Loja artesanal de incensos
+      </Text>
     </main>
   )
 }
