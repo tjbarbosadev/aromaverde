@@ -17,7 +17,7 @@ Loja artesanal de incensos — [aromaverdeincensos.com.br](https://aromaverdeinc
 | 1 Especificação | [docs/PRD.md](docs/PRD.md) |
 | 2 Design / arquitetura | [docs/TECH_SPEC.md](docs/TECH_SPEC.md) |
 | 3 Decomposição | [docs/DECOMPOSICAO.md](docs/DECOMPOSICAO.md) + [docs/tasks/](docs/tasks/) |
-| 4+ Implementação | Issues no [Project](https://github.com/users/tjbarbosadev/projects) — começar por **A0** só com ok explícito |
+| 4+ Implementação | Issues no [Project #2](https://github.com/users/tjbarbosadev/projects/2) — começar por **A0** só com ok explícito |
 
 Infra: [docs/SERVER.md](docs/SERVER.md) · E-mail: [docs/EMAIL.md](docs/EMAIL.md) · Processo: [docs/PROCESS.md](docs/PROCESS.md)
 
