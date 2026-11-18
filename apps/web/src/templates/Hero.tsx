@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import heroProduct from '../assets/earthware/hero-product.png'
+import heroMugs from '../assets/earthware/hero-mugs.png'
 import heroTexture from '../assets/earthware/hero-texture.jpeg'
 import { siteConfig } from '../data/site'
 
@@ -40,11 +40,11 @@ export function Hero() {
           Explorar a loja
         </Link>
 
-        <div className="w-full max-w-[36rem] shadow-[0px_44px_64px_0px_rgba(0,0,0,0.27)]">
+        <div className="w-full max-w-[20rem] md:max-w-[24rem]">
           <img
-            src={heroProduct}
+            src={heroMugs}
             alt={heroImageAlt}
-            className="h-auto w-full object-contain"
+            className="h-auto w-full object-contain drop-shadow-[0px_44px_40px_rgba(0,0,0,0.22)]"
             fetchPriority="high"
           />
         </div>

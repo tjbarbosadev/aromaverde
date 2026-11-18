@@ -6,13 +6,12 @@ export function Footer() {
 
   return (
     <footer className="bg-ink text-white">
-      <div className="mx-auto grid max-w-[1200px] gap-12 px-6 py-16 md:grid-cols-4 md:gap-10 md:px-10 md:py-20">
+      <div className="mx-auto grid max-w-[1200px] gap-12 px-6 py-16 md:grid-cols-[1.5fr_1fr_1fr_1fr] md:gap-10 md:px-10 md:py-20">
         <div className="flex flex-col gap-5">
           <p className="font-display text-3xl font-semibold">{siteConfig.brandName}</p>
           <p className="font-body text-sm leading-normal text-muted">
             {siteConfig.tagline}
           </p>
-          <p className="font-body text-sm text-muted">©{year} {siteConfig.brandName}</p>
           <div>
             <p className="mb-3 font-body text-base font-semibold">Siga</p>
             <a
@@ -44,7 +43,7 @@ export function Footer() {
           >
             {siteConfig.contactEmail}
           </a>
-          <p className="font-body text-sm text-muted">WhatsApp (placeholder até configurar env)</p>
+          <p className="font-body text-sm text-muted">WhatsApp: pedidos finalizados pelo chat</p>
         </div>
 
         <div className="flex flex-col gap-3">
@@ -55,6 +54,12 @@ export function Footer() {
           <Link to="/" className="font-body text-sm text-muted no-underline hover:text-white">
             Início
           </Link>
+        </div>
+      </div>
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-[1200px] flex-col gap-2 px-6 py-6 font-body text-sm text-muted md:flex-row md:items-center md:justify-between md:px-10">
+          <p>© {year} {siteConfig.brandName}. Todos os direitos reservados.</p>
+          <p>Feito à mão, com intenção.</p>
         </div>
       </div>
     </footer>

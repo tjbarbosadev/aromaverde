@@ -37,7 +37,39 @@ describe('HomePage', () => {
 
   it('imagem do hero tem alt descritivo', () => {
     renderAt('/')
-    expect(screen.getByRole('img', { name: /artesanal|ritual|Aroma Verde/i })).toBeInTheDocument()
+    expect(screen.getByRole('img', { name: /cerâmica e ritual/i })).toBeInTheDocument()
+  })
+
+  it('compõe as seções da home na ordem do Figma', () => {
+    renderAt('/')
+    const titles = [
+      'Eles confiam em nós',
+      'Categorias',
+      'Sobre nós',
+      /Incensos feitos à mão/i,
+      'O que dizem sobre nós',
+      /Últimos rituais/i,
+      'Receba novidades',
+    ].map((name) => screen.getByRole('heading', { level: 2, name }))
+    for (let i = 1; i < titles.length; i++) {
+      expect(
+        titles[i - 1].compareDocumentPosition(titles[i]) & Node.DOCUMENT_POSITION_FOLLOWING,
+      ).toBeTruthy()
+    }
+  })
+
+  it('categorias linkam para /loja com intenção e "Ver todos" para /loja', () => {
+    renderAt('/')
+    expect(screen.getByRole('link', { name: /Acolher/ })).toHaveAttribute(
+      'href',
+      '/loja?intencao=acolher',
+    )
+    expect(screen.getByRole('link', { name: 'Ver todos' })).toHaveAttribute('href', '/loja')
+  })
+
+  it('não expõe Sign Up / Login', () => {
+    renderAt('/')
+    expect(screen.queryByText(/sign up|login|entrar/i)).not.toBeInTheDocument()
   })
 
   it('nav expõe Início, Loja e Sobre', () => {

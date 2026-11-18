@@ -1,9 +1,9 @@
 export function HomeNewsletter() {
   return (
-    <section className="bg-cream px-6 py-16 md:py-20">
+    <section className="bg-blush px-6 py-16 md:py-24" aria-labelledby="newsletter-title">
       <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
         <div className="flex flex-col items-center gap-4">
-          <h2 className="font-display text-4xl font-normal text-ink md:text-6xl">
+          <h2 id="newsletter-title" className="font-display text-4xl font-normal text-ink md:text-6xl">
             Receba novidades
           </h2>
           <p className="max-w-xl font-body text-base leading-relaxed text-smoke md:text-xl">
