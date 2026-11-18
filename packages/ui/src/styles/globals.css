@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap');
+@import 'tailwindcss';
+@import './tokens.css';
+
+@layer base {
+  body {
+    @apply m-0 bg-surface font-body text-ink antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-sage);
+    outline-offset: 2px;
+  }
+}
