@@ -5,4 +5,16 @@ export { Icon, type IconProps } from './atoms/Icon'
 export { Input, type InputProps } from './atoms/Input'
 export { Price, formatPriceBRL, type PriceProps } from './atoms/Price'
 export { Text, type TextProps, type TextSize, type TextTone } from './atoms/Text'
+export {
+  CartLineItem,
+  IntentionChip,
+  NavLink,
+  ProductCard,
+  QuantityStepper,
+  type CartLineItemProps,
+  type IntentionChipProps,
+  type NavLinkProps,
+  type ProductCardProps,
+  type QuantityStepperProps,
+} from './molecules'
 export { cn } from './lib/cn'
