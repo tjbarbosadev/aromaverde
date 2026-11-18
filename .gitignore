@@ -13,3 +13,7 @@ coverage/
 /docs/
 
 *storybook.log
+
+# Local agent / worktree scratch (never commit)
+.worktrees/
+.superpowers/
