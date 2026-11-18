@@ -8,7 +8,7 @@ export function HomeFeatured() {
       className="bg-blush px-12 py-16 md:py-20"
       aria-labelledby="featured-title"
     >
-      <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 md:gap-12">
+      <div className="mx-auto flex max-w-300 flex-col items-center gap-10 md:gap-12">
         <div className="flex max-w-3xl flex-col items-center gap-6 text-center">
           <Heading
             level={2}

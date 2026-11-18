@@ -9,7 +9,7 @@ export function HomeProductLines() {
       className="bg-surface px-12 py-16 md:py-20"
       aria-labelledby="lines-title"
     >
-      <div className="mx-auto flex max-w-[1200px] flex-col gap-10 md:gap-12">
+      <div className="mx-auto flex max-w-300 flex-col gap-10 md:gap-12">
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <Heading
             level={2}

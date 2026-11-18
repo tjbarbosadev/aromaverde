@@ -11,13 +11,23 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-20 border-b border-line bg-white">
-      <div className="mx-auto grid max-w-[1200px] grid-cols-[1fr_auto_1fr] items-center gap-4 px-12 py-3.5">
+      <div className="mx-auto grid max-w-300 grid-cols-[1fr_auto_1fr] items-center gap-4 px-12 py-3.5">
         <NavLink
           to="/"
-          className="justify-self-start font-display text-2xl font-semibold tracking-tight text-ink no-underline md:text-[1.75rem]"
+          className="justify-self-start inline-flex items-center gap-2.5 no-underline"
           aria-label={`${siteConfig.brandName} — início`}
         >
-          {siteConfig.brandName}
+          <img
+            src="/brand/logo-header.png"
+            alt=""
+            width={40}
+            height={40}
+            className="size-10 shrink-0"
+            decoding="async"
+          />
+          <span className="font-display text-2xl font-semibold tracking-tight text-ink md:text-[1.75rem]">
+            {siteConfig.brandName}
+          </span>
         </NavLink>
 
         <nav aria-label="Principal" className="hidden items-center gap-7 md:flex">

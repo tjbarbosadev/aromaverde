@@ -49,7 +49,7 @@ export function ShopPage() {
   return (
     <>
       <Seo title="Loja" description="Catálogo de incensos artesanais Aroma Verde." />
-      <div className="mx-auto max-w-[1200px] px-6 py-12 md:px-12 md:py-16">
+      <div className="mx-auto max-w-300 px-6 py-12 md:px-12 md:py-16">
         <Heading level={1} className="mb-3 text-4xl font-normal md:text-5xl">
           Nossos produtos
         </Heading>
