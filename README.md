@@ -1,5 +1,8 @@
 # Aroma Verde
 
+> Workspace local: `/home/thiago/Projects/aroma` (`docs/` → este diretório; git neste `project/`).
+
+
 Loja artesanal de incensos — [aromaverdeincensos.com.br](https://aromaverdeincensos.com.br) · [@aromaverde](https://www.instagram.com/aromaverde/)
 
 ## Stack canônica
