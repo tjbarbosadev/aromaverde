@@ -1,48 +1,52 @@
 import { Link } from 'react-router-dom'
-import { cn } from '@aromaverde/ui'
-import heroImage from '../assets/hero-incense.jpg'
+import heroProduct from '../assets/earthware/hero-product.png'
+import heroTexture from '../assets/earthware/hero-texture.jpeg'
 import { siteConfig } from '../data/site'
 
 export const heroImageAlt =
-  'Varetas de incenso acesas em primeiro plano, com fios de fumaça subindo sobre um fundo verde desfocado.'
+  'Peças artesanais em cerâmica e ritual — referência visual adaptada para a marca Aroma Verde.'
 
 export function Hero() {
   return (
-    <section className="relative isolate flex min-h-[85svh] items-end overflow-hidden bg-sage-deep">
-      <img
-        src={heroImage}
-        alt={heroImageAlt}
-        className="absolute inset-0 -z-20 h-full w-full object-cover"
-        fetchPriority="high"
-      />
+    <section className="relative overflow-hidden bg-blush">
       <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-gradient-to-t from-ink/90 via-ink/50 to-ink/10 md:bg-gradient-to-r md:from-ink/85 md:via-ink/45 md:to-transparent"
-      />
+        aria-hidden
+        className="pointer-events-none absolute inset-0 mix-blend-multiply opacity-50"
+      >
+        <img
+          src={heroTexture}
+          alt=""
+          className="h-full w-full object-cover"
+        />
+      </div>
 
-      <div className="mx-auto w-full max-w-6xl px-6 pb-14 pt-32 md:pb-24">
-        <h1 className="font-display text-6xl font-bold leading-[0.95] tracking-tight text-cream sm:text-7xl md:text-8xl">
-          {siteConfig.brandName}
-        </h1>
-        <p className="mt-5 max-w-md font-body text-lg text-cream/90 md:text-xl">
-          {siteConfig.tagline}
-        </p>
-        <div className="mt-8 flex flex-wrap items-center gap-3">
-          <Link
-            to="/loja"
-            className={cn(
-              'inline-flex items-center justify-center rounded-md bg-cream px-6 py-3 font-body text-lg font-semibold text-sage-deep no-underline transition-colors',
-              'hover:bg-surface focus-visible:outline-cream',
-            )}
-          >
-            Explorar a loja
-          </Link>
-          <Link
-            to="/sobre"
-            className="inline-flex items-center justify-center rounded-md px-4 py-3 font-body text-lg font-semibold text-cream underline decoration-cream/50 underline-offset-4 transition-colors hover:decoration-cream focus-visible:outline-cream"
-          >
-            Conhecer a marca
-          </Link>
+      <div className="relative mx-auto flex max-w-[1200px] flex-col items-center gap-10 px-6 pb-16 pt-14 text-center md:gap-12 md:pb-20 md:pt-20">
+        <div className="flex max-w-[44rem] flex-col items-center gap-3">
+          <p className="font-body text-sm font-semibold uppercase tracking-[0.18em] text-smoke">
+            {siteConfig.heroEyebrow}
+          </p>
+          <h1 className="font-display text-5xl font-normal leading-[1.05] text-ink sm:text-6xl md:text-[5rem]">
+            {siteConfig.heroHeadline}
+          </h1>
+          <p className="max-w-xl font-body text-lg leading-relaxed text-smoke md:text-[1.75rem] md:leading-[1.6]">
+            {siteConfig.heroSupport}
+          </p>
+        </div>
+
+        <Link
+          to="/loja"
+          className="inline-flex h-[58px] items-center justify-center bg-ink px-11 font-body text-lg font-semibold text-white no-underline transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+        >
+          Explorar a loja
+        </Link>
+
+        <div className="w-full max-w-[36rem] shadow-[0px_44px_64px_0px_rgba(0,0,0,0.27)]">
+          <img
+            src={heroProduct}
+            alt={heroImageAlt}
+            className="h-auto w-full object-contain"
+            fetchPriority="high"
+          />
         </div>
       </div>
     </section>

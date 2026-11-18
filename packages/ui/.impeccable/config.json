@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "plus jakarta sans",
+        "createdAt": "2026-11-18T21:52:26.959Z",
+        "reason": "Earthware Figma Style Guide (node 207:566) mandates Plus Jakarta Sans for body/UI; user provided file 83NbUmjteIhIb00Bjr1NxQ as layout reference"
+      }
+    ]
+  }
+}
