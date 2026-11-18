@@ -18,15 +18,36 @@ Specs / tasks / processo ficam **fora deste repo** (workspace local `docs/`). Es
 
 **Infra:** Caddy (estático, espelho Maria Bonita) · Cloudflare · Verdaccio (lab npm) · `contato@` via Email Routing
 
-## Monorepo
+## Como rodar (local)
+
+Na raiz de `project/` (Node 22+):
 
 ```bash
+cd /path/to/aromaverde   # este repo
 npm install
-npm run dev          # apps/web → http://localhost:5173
-npm run storybook    # packages/ui → http://localhost:6006
+```
+
+| O quê | Comando | URL |
+|-------|---------|-----|
+| Loja (web) | `npm run dev` | http://localhost:5173 |
+| Design system (Storybook) | `npm run storybook` | http://localhost:6006 |
+
+Os dois sobem em paralelo em terminais separados. Atalhos equivalentes:
+
+```bash
+npm run dev -w @aromaverde/web          # mesma coisa que npm run dev
+npm run storybook -w @aromaverde/ui     # mesma coisa que npm run storybook
+```
+
+Outros:
+
+```bash
 npm test
 npm run lint
+npm run build                           # gera dist/ na raiz (preview/produção)
 ```
+
+## Monorepo
 
 | Pacote | Path | Papel |
 |--------|------|-------|
@@ -47,4 +68,4 @@ npm run lint
 
 ## Estado atual
 
-Trilha A0–A9 em `main`. A10 (logo + favicons + deploy concurrency/OAuth): PR em andamento.
+Trilha A0–A10 em `main` (loja SPA + DS/Storybook + CI deploy).
