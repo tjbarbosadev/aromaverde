@@ -7,60 +7,46 @@ import { Meta } from '@storybook/blocks'
 Fonte canônica: `@aromaverde/ui/styles/tokens.css`.  
 Átomos usam classes Tailwind (`bg-sage`, `text-ink`, `font-display`) ou `var(--color-*)` — nunca hex solto no JSX.
 
+Paleta alinhada ao **Earthware** (olive / blush / ink) com empurrão de marca verde.
+
 ## Cores
 
 | Token | Valor | Swatch |
 |-------|-------|--------|
-| `--color-sage` | `#5f7f62` | <span style={{display:'inline-block',width:48,height:24,background:'var(--color-sage)',borderRadius:4}} /> |
-| `--color-sage-deep` | `#3f5a43` | <span style={{display:'inline-block',width:48,height:24,background:'var(--color-sage-deep)',borderRadius:4}} /> |
+| `--color-sage` | `#a7b080` | <span style={{display:'inline-block',width:48,height:24,background:'var(--color-sage)',borderRadius:4}} /> |
+| `--color-sage-deep` | `#002015` | <span style={{display:'inline-block',width:48,height:24,background:'var(--color-sage-deep)',borderRadius:4}} /> |
 | `--color-earth` | `#8a6a4a` | <span style={{display:'inline-block',width:48,height:24,background:'var(--color-earth)',borderRadius:4}} /> |
-| `--color-cream` | `#eef2eb` | <span style={{display:'inline-block',width:48,height:24,background:'var(--color-cream)',border:'1px solid #ccc',borderRadius:4}} /> |
-| `--color-ink` | `#1b221c` | <span style={{display:'inline-block',width:48,height:24,background:'var(--color-ink)',borderRadius:4}} /> |
-| `--color-smoke` | `#8b958c` | <span style={{display:'inline-block',width:48,height:24,background:'var(--color-smoke)',borderRadius:4}} /> |
-| `--color-surface` | `#f7faf5` | <span style={{display:'inline-block',width:48,height:24,background:'var(--color-surface)',border:'1px solid #ccc',borderRadius:4}} /> |
+| `--color-cream` | `#f0f2e5` | <span style={{display:'inline-block',width:48,height:24,background:'var(--color-cream)',border:'1px solid #ccc',borderRadius:4}} /> |
+| `--color-blush` | `#fff0eb` | <span style={{display:'inline-block',width:48,height:24,background:'var(--color-blush)',border:'1px solid #ccc',borderRadius:4}} /> |
+| `--color-peach` | `#fbd4c7` | <span style={{display:'inline-block',width:48,height:24,background:'var(--color-peach)',borderRadius:4}} /> |
+| `--color-ink` | `#000204` | <span style={{display:'inline-block',width:48,height:24,background:'var(--color-ink)',borderRadius:4}} /> |
+| `--color-smoke` | `#5e666c` | <span style={{display:'inline-block',width:48,height:24,background:'var(--color-smoke)',borderRadius:4}} /> |
+| `--color-surface` | `#fcfdf9` | <span style={{display:'inline-block',width:48,height:24,background:'var(--color-surface)',border:'1px solid #ccc',borderRadius:4}} /> |
+| `--color-line` | `#ededed` | <span style={{display:'inline-block',width:48,height:24,background:'var(--color-line)',border:'1px solid #ccc',borderRadius:4}} /> |
 
 ### Utilitários
 
 <div style={{display:'flex',gap:12,flexWrap:'wrap',marginTop:16}}>
-  <div className="bg-sage text-cream px-4 py-2 rounded-md">bg-sage</div>
+  <div className="bg-sage text-ink px-4 py-2 rounded-md">bg-sage</div>
   <div className="bg-sage-deep text-cream px-4 py-2 rounded-md">bg-sage-deep</div>
-  <div className="bg-earth text-cream px-4 py-2 rounded-md">bg-earth</div>
+  <div className="bg-blush text-ink px-4 py-2 rounded-md">bg-blush</div>
   <div className="bg-cream text-ink px-4 py-2 rounded-md">bg-cream</div>
   <div className="bg-ink text-cream px-4 py-2 rounded-md">bg-ink</div>
-  <div className="bg-smoke text-cream px-4 py-2 rounded-md">bg-smoke</div>
-  <div className="bg-surface text-ink px-4 py-2 rounded-md border border-smoke">bg-surface</div>
+  <div className="bg-surface text-ink px-4 py-2 rounded-md border border-line">bg-surface</div>
 </div>
 
 ## Tipografia
 
 | Token | Família | Sample |
 |-------|---------|--------|
-| `--font-display` | Cormorant Garamond | <p className="font-display text-3xl font-bold text-ink">Aroma Verde</p> |
-| `--font-body` | Source Sans 3 | <p className="font-body text-base text-ink">Incensos artesanais · corpo de texto</p> |
+| `--font-display` | Cormorant Garamond (stand-in Gestura/Gallient) | <p className="font-display text-3xl text-ink">Aroma Verde</p> |
+| `--font-body` | Plus Jakarta Sans | <p className="font-body text-base text-ink">Incensos artesanais · corpo de texto</p> |
 
 ## Espaço (escala 4/8)
 
 | Token | Valor |
 |-------|-------|
-| `--spacing-1` | `0.25rem` |
-| `--spacing-2` | `0.5rem` |
-| `--spacing-3` | `0.75rem` |
-| `--spacing-4` | `1rem` |
-| `--spacing-6` | `1.5rem` |
-| `--spacing-8` | `2rem` |
-| `--spacing-12` | `3rem` |
-| `--spacing-16` | `4rem` |
-
-<div style={{display:'flex',alignItems:'flex-end',gap:8,marginTop:16}}>
-  <div className="bg-sage" style={{width:8,height:'var(--spacing-1)'}} title="1" />
-  <div className="bg-sage" style={{width:8,height:'var(--spacing-2)'}} title="2" />
-  <div className="bg-sage" style={{width:8,height:'var(--spacing-3)'}} title="3" />
-  <div className="bg-sage" style={{width:8,height:'var(--spacing-4)'}} title="4" />
-  <div className="bg-sage" style={{width:8,height:'var(--spacing-6)'}} title="6" />
-  <div className="bg-sage" style={{width:8,height:'var(--spacing-8)'}} title="8" />
-  <div className="bg-sage" style={{width:8,height:'var(--spacing-12)'}} title="12" />
-  <div className="bg-sage" style={{width:8,height:'var(--spacing-16)'}} title="16" />
-</div>
+| `--spacing-1` … `--spacing-16` | `0.25rem` … `4rem` |
 
 ## Radius
 
@@ -68,11 +54,4 @@ Fonte canônica: `@aromaverde/ui/styles/tokens.css`.
 |-------|-------|
 | `--radius-sm` | `0.25rem` |
 | `--radius-md` | `0.5rem` |
-
-## Breakpoints
-
-| Token | Valor |
-|-------|-------|
-| `--breakpoint-sm` | `40rem` |
-| `--breakpoint-md` | `48rem` |
-| `--breakpoint-lg` | `64rem` |
+| `--radius-none` | `0` (CTAs Earthware) |

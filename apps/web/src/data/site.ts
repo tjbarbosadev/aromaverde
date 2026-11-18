@@ -6,8 +6,10 @@ export type NavItem = {
 export type SiteConfig = {
   brandName: string
   tagline: string
+  heroHeadline: string
+  heroSupport: string
   contactEmail: string
-  /** Placeholder até o número real ser informado (VITE_WHATSAPP_E164). */
+  /** Placeholder até o número real (VITE_WHATSAPP_E164). */
   whatsappE164: string
   instagramUrl: string
   nav: NavItem[]
@@ -19,7 +21,10 @@ export type SiteConfig = {
 
 export const siteConfig: SiteConfig = {
   brandName: 'Aroma Verde',
-  tagline: 'Incensos artesanais para acolher, purificar e prosperar.',
+  tagline: 'A natureza em sua forma mais artesanal.',
+  heroHeadline: 'Mais do que acender um incenso, é criar um momento.',
+  heroSupport:
+    'Incensos artesanais de ervas — um a um, à mão — para acolher, purificar, prosperar e se reconectar.',
   contactEmail: 'contato@aromaverdeincensos.com.br',
   whatsappE164: import.meta.env.VITE_WHATSAPP_E164 || '+5500000000000',
   instagramUrl: 'https://www.instagram.com/aromaverde/',
@@ -31,6 +36,6 @@ export const siteConfig: SiteConfig = {
   seoDefaults: {
     titleTemplate: '%s · Aroma Verde',
     description:
-      'Loja artesanal de incensos naturais: ervas, resinas e intenções para acolher, purificar e prosperar.',
+      'Incensos artesanais feitos à mão: varetas, bastões de ervas, canelinhas e Palo Santo.',
   },
 }

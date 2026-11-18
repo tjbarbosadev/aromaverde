@@ -6,15 +6,24 @@ export { Input, type InputProps } from './atoms/Input'
 export { Price, formatPriceBRL, type PriceProps } from './atoms/Price'
 export { Text, type TextProps, type TextSize, type TextTone } from './atoms/Text'
 export {
+  BlogCard,
   CartLineItem,
   IntentionChip,
   NavLink,
   ProductCard,
+  ProductTile,
   QuantityStepper,
+  TestimonialCard,
+  type BlogCardProps,
+  type BlogCardSize,
   type CartLineItemProps,
   type IntentionChipProps,
   type NavLinkProps,
   type ProductCardProps,
+  type ProductTileProps,
   type QuantityStepperProps,
+  type TestimonialCardProps,
+  type TestimonialTone,
 } from './molecules'
+export { ProductGrid, type ProductGridProps } from './organisms/ProductGrid'
 export { cn } from './lib/cn'

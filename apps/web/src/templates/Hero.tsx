@@ -1,48 +1,40 @@
 import { Link } from 'react-router-dom'
-import { cn } from '@aromaverde/ui'
-import heroImage from '../assets/hero-incense.jpg'
+import { Heading, Text } from '@aromaverde/ui'
+import { heroImage } from '../data/home'
 import { siteConfig } from '../data/site'
 
-export const heroImageAlt =
-  'Varetas de incenso acesas em primeiro plano, com fios de fumaça subindo sobre um fundo verde desfocado.'
+export const heroImageAlt = heroImage.alt
 
 export function Hero() {
   return (
-    <section className="relative isolate flex min-h-[85svh] items-end overflow-hidden bg-sage-deep">
-      <img
-        src={heroImage}
-        alt={heroImageAlt}
-        className="absolute inset-0 -z-20 h-full w-full object-cover"
-        fetchPriority="high"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-gradient-to-t from-ink/90 via-ink/50 to-ink/10 md:bg-gradient-to-r md:from-ink/85 md:via-ink/45 md:to-transparent"
-      />
+    <section className="relative overflow-hidden bg-blush">
+      <div className="relative mx-auto flex max-w-[1200px] flex-col items-center gap-8 px-12 py-16 text-center md:gap-10 md:py-20">
+        <div className="flex max-w-[36rem] flex-col items-center gap-3">
+          <Heading
+            level={1}
+            className="text-[2.5rem] font-normal leading-[1.05] tracking-tight sm:text-5xl md:text-[4rem]"
+          >
+            {siteConfig.heroHeadline}
+          </Heading>
+          <Text tone="smoke" className="max-w-[24rem] text-base leading-[1.6] md:text-lg">
+            {siteConfig.heroSupport}
+          </Text>
+        </div>
 
-      <div className="mx-auto w-full max-w-6xl px-6 pb-14 pt-32 md:pb-24">
-        <h1 className="font-display text-6xl font-bold leading-[0.95] tracking-tight text-cream sm:text-7xl md:text-8xl">
-          {siteConfig.brandName}
-        </h1>
-        <p className="mt-5 max-w-md font-body text-lg text-cream/90 md:text-xl">
-          {siteConfig.tagline}
-        </p>
-        <div className="mt-8 flex flex-wrap items-center gap-3">
-          <Link
-            to="/loja"
-            className={cn(
-              'inline-flex items-center justify-center rounded-md bg-cream px-6 py-3 font-body text-lg font-semibold text-sage-deep no-underline transition-colors',
-              'hover:bg-surface focus-visible:outline-cream',
-            )}
-          >
-            Explorar a loja
-          </Link>
-          <Link
-            to="/sobre"
-            className="inline-flex items-center justify-center rounded-md px-4 py-3 font-body text-lg font-semibold text-cream underline decoration-cream/50 underline-offset-4 transition-colors hover:decoration-cream focus-visible:outline-cream"
-          >
-            Conhecer a marca
-          </Link>
+        <Link
+          to="/loja"
+          className="inline-flex h-14 items-center justify-center bg-ink px-10 font-body text-base font-semibold text-white no-underline transition-colors hover:bg-sage-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+        >
+          Explorar a loja
+        </Link>
+
+        <div className="w-full max-w-[36rem] shadow-[0px_44px_64px_0px_rgba(0,0,0,0.27)]">
+          <img
+            src={heroImage.src}
+            alt={heroImageAlt}
+            className="h-auto w-full bg-white object-contain"
+            fetchPriority="high"
+          />
         </div>
       </div>
     </section>

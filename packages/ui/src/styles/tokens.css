@@ -1,14 +1,19 @@
 :root {
-  --color-sage: #5f7f62;
-  --color-sage-deep: #3f5a43;
+  /* Earthware-aligned palette (olive / peach / ink) with Aroma Verde sage push */
+  --color-sage: #a7b080;
+  --color-sage-deep: #002015;
   --color-earth: #8a6a4a;
-  --color-cream: #eef2eb;
-  --color-ink: #1b221c;
-  --color-smoke: #8b958c;
-  --color-surface: #f7faf5;
+  --color-cream: #f0f2e5;
+  --color-blush: #fff0eb;
+  --color-peach: #fbd4c7;
+  --color-ink: #000204;
+  --color-smoke: #5e666c;
+  --color-surface: #fcfdf9;
+  --color-muted: #888888;
+  --color-line: #ededed;
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
 
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
@@ -21,6 +26,7 @@
 
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
+  --radius-none: 0;
 
   --breakpoint-sm: 40rem;
   --breakpoint-md: 48rem;
@@ -28,16 +34,20 @@
 }
 
 @theme {
-  --color-sage: #5f7f62;
-  --color-sage-deep: #3f5a43;
+  --color-sage: #a7b080;
+  --color-sage-deep: #002015;
   --color-earth: #8a6a4a;
-  --color-cream: #eef2eb;
-  --color-ink: #1b221c;
-  --color-smoke: #8b958c;
-  --color-surface: #f7faf5;
+  --color-cream: #f0f2e5;
+  --color-blush: #fff0eb;
+  --color-peach: #fbd4c7;
+  --color-ink: #000204;
+  --color-smoke: #5e666c;
+  --color-surface: #fcfdf9;
+  --color-muted: #888888;
+  --color-line: #ededed;
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
 
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
@@ -50,6 +60,7 @@
 
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
+  --radius-none: 0;
 
   --breakpoint-sm: 40rem;
   --breakpoint-md: 48rem;

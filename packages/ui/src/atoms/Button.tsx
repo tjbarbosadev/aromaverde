@@ -10,9 +10,9 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 }
 
 const variantClasses: Record<ButtonVariant, string> = {
-  primary: 'bg-sage text-cream hover:bg-sage-deep',
-  secondary: 'border border-sage bg-cream text-ink hover:bg-surface',
-  ghost: 'bg-transparent text-sage hover:bg-cream',
+  primary: 'rounded-none bg-ink text-white hover:bg-sage-deep',
+  secondary: 'rounded-none border border-ink bg-transparent text-ink hover:bg-cream',
+  ghost: 'bg-transparent text-ink hover:bg-cream',
 }
 
 const sizeClasses: Record<ButtonSize, string> = {
