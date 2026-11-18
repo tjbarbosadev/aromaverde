@@ -1,15 +1,15 @@
 import { ShoppingBag } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
-import { cn } from '@aromaverde/ui'
+import { cn, Icon, Text } from '@aromaverde/ui'
 import { siteConfig } from '../data/site'
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-20 border-b border-line bg-surface/95 backdrop-blur-sm supports-[backdrop-filter]:bg-surface/80">
-      <div className="mx-auto grid max-w-[1200px] grid-cols-[1fr_auto_1fr] items-center gap-4 px-6 py-4 md:px-10 md:py-5">
+    <header className="sticky top-0 z-20 border-b border-line bg-white">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-[1fr_auto_1fr] items-center gap-4 px-12 py-4">
         <NavLink
           to="/"
-          className="justify-self-start font-display text-3xl font-semibold tracking-tight text-ink no-underline"
+          className="justify-self-start font-display text-2xl font-semibold tracking-tight text-ink no-underline md:text-3xl"
           aria-label={`${siteConfig.brandName} — início`}
         >
           {siteConfig.brandName}
@@ -26,7 +26,7 @@ export function Header() {
                   'font-body text-base no-underline transition-colors',
                   isActive
                     ? 'font-bold text-ink'
-                    : 'font-medium text-smoke hover:text-ink',
+                    : 'font-normal text-smoke hover:text-ink',
                 )
               }
             >
@@ -37,10 +37,12 @@ export function Header() {
 
         <NavLink
           to="/carrinho"
-          className="justify-self-end inline-flex items-center gap-1.5 font-body text-base font-semibold text-smoke no-underline hover:text-ink"
+          className="justify-self-end inline-flex items-center gap-1.5 no-underline"
         >
-          <ShoppingBag aria-hidden className="size-5" strokeWidth={1.75} />
-          Carrinho
+          <Icon icon={ShoppingBag} size={20} className="text-smoke" />
+          <Text as="span" tone="smoke" className="font-semibold">
+            Carrinho
+          </Text>
         </NavLink>
       </div>
 
@@ -56,7 +58,7 @@ export function Header() {
             className={({ isActive }) =>
               cn(
                 'font-body text-sm no-underline',
-                isActive ? 'font-bold text-ink' : 'font-medium text-smoke',
+                isActive ? 'font-bold text-ink' : 'font-normal text-smoke',
               )
             }
           >

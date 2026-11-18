@@ -1,33 +1,49 @@
+import { Package, ShieldCheck, Sparkles } from 'lucide-react'
+import { Heading, Icon, Text } from '@aromaverde/ui'
 import { aboutValues } from '../data/home'
+
+const icons = {
+  envio: Package,
+  qualidade: Sparkles,
+  compra: ShieldCheck,
+} as const
 
 export function HomeAbout() {
   return (
-    <section className="bg-surface px-6 pb-16 md:px-10 md:pb-24" aria-labelledby="about-title">
-      <div className="mx-auto flex max-w-[1200px] flex-col gap-12 md:gap-16">
-        <div className="flex flex-col items-center gap-4 text-center">
-          <h2 id="about-title" className="font-display text-4xl font-normal text-ink md:text-6xl">
+    <section
+      className="bg-surface px-12 py-14 md:py-20"
+      aria-labelledby="about-title"
+    >
+      <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-12 md:gap-14">
+        <div className="flex flex-col items-center gap-2 text-center">
+          <Heading
+            level={2}
+            id="about-title"
+            className="text-4xl font-normal tracking-wide md:text-5xl"
+          >
             Sobre nós
-          </h2>
-          <p className="max-w-2xl font-body text-base leading-relaxed text-smoke md:text-lg">
+          </Heading>
+          <Text tone="smoke" className="max-w-sm leading-relaxed">
             Mais de 250 blends artesanais de incenso, feitos com ervas e resinas
             para acolher, purificar e prosperar.
-          </p>
+          </Text>
         </div>
 
-        <ul className="grid gap-10 md:grid-cols-3">
+        <ul className="grid w-full gap-10 md:grid-cols-3 md:gap-12">
           {aboutValues.map((v) => (
-            <li key={v.id} className="flex flex-col items-center gap-5 text-center">
-              <div className="relative size-24">
-                <img src={v.dot} alt="" aria-hidden className="size-full" />
-                <img
-                  src={v.icon}
-                  alt=""
-                  aria-hidden
-                  className="absolute left-1/2 top-1/2 w-9 -translate-x-1/2 -translate-y-1/2"
-                />
-              </div>
-              <h3 className="font-body text-xl font-bold text-ink">{v.title}</h3>
-              <p className="max-w-xs font-body text-base leading-relaxed text-smoke">{v.text}</p>
+            <li
+              key={v.id}
+              className="flex flex-col items-center gap-3 text-center"
+            >
+              <span className="inline-flex size-20 items-center justify-center rounded-full border border-dashed border-ink/30">
+                <Icon icon={icons[v.id as keyof typeof icons]} size={28} />
+              </span>
+              <Heading level={3} className="font-body text-base font-bold tracking-wide">
+                {v.title}
+              </Heading>
+              <Text tone="smoke" size="sm" className="max-w-[14rem] leading-relaxed">
+                {v.text}
+              </Text>
             </li>
           ))}
         </ul>

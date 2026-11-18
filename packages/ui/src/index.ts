@@ -10,11 +10,13 @@ export {
   IntentionChip,
   NavLink,
   ProductCard,
+  ProductTile,
   QuantityStepper,
   type CartLineItemProps,
   type IntentionChipProps,
   type NavLinkProps,
   type ProductCardProps,
+  type ProductTileProps,
   type QuantityStepperProps,
 } from './molecules'
 export { cn } from './lib/cn'

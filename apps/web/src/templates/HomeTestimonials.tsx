@@ -1,5 +1,6 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useRef } from 'react'
+import { Button, Heading, Text } from '@aromaverde/ui'
 import { testimonials } from '../data/home'
 
 export function HomeTestimonials() {
@@ -11,23 +12,41 @@ export function HomeTestimonials() {
     el.scrollBy({ left: direction * el.clientWidth * 0.8, behavior: 'smooth' })
   }
 
-  const arrow =
-    'inline-flex size-12 items-center justify-center border border-ink bg-transparent text-ink transition-colors hover:bg-ink hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink'
-
   return (
-    <section className="bg-cream px-6 py-16 md:px-10 md:py-24" aria-labelledby="testimonials-title">
-      <div className="mx-auto flex max-w-[1200px] flex-col gap-10 md:gap-14">
+    <section
+      className="bg-cream px-12 py-14 md:py-20"
+      aria-labelledby="testimonials-title"
+    >
+      <div className="mx-auto flex max-w-[1200px] flex-col gap-10 md:gap-12">
         <div className="flex items-end justify-between gap-6">
-          <h2 id="testimonials-title" className="font-display text-4xl font-normal text-ink md:text-6xl">
+          <Heading
+            level={2}
+            id="testimonials-title"
+            className="text-4xl font-normal md:text-5xl"
+          >
             O que dizem sobre nós
-          </h2>
+          </Heading>
           <div className="flex gap-3">
-            <button type="button" aria-label="Depoimento anterior" className={arrow} onClick={() => scroll(-1)}>
+            <Button
+              type="button"
+              variant="secondary"
+              size="sm"
+              aria-label="Depoimento anterior"
+              className="size-12 rounded-none p-0"
+              onClick={() => scroll(-1)}
+            >
               <ChevronLeft aria-hidden className="size-5" />
-            </button>
-            <button type="button" aria-label="Próximo depoimento" className={arrow} onClick={() => scroll(1)}>
+            </Button>
+            <Button
+              type="button"
+              variant="secondary"
+              size="sm"
+              aria-label="Próximo depoimento"
+              className="size-12 rounded-none p-0"
+              onClick={() => scroll(1)}
+            >
               <ChevronRight aria-hidden className="size-5" />
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -38,11 +57,23 @@ export function HomeTestimonials() {
           {testimonials.map((t) => (
             <li key={t.id} className="w-[85%] shrink-0 snap-start md:w-auto">
               <figure className="flex h-full flex-col justify-between gap-8 bg-surface p-8">
-                <blockquote className="font-display text-2xl leading-snug text-ink">
-                  “{t.quote}”
+                <blockquote>
+                  <Text
+                    as="span"
+                    className="font-display text-2xl leading-snug text-ink"
+                  >
+                    “{t.quote}”
+                  </Text>
                 </blockquote>
-                <figcaption className="font-body text-sm font-semibold uppercase tracking-[0.12em] text-smoke">
-                  {t.author}
+                <figcaption>
+                  <Text
+                    as="span"
+                    tone="smoke"
+                    size="sm"
+                    className="font-semibold uppercase tracking-[0.12em]"
+                  >
+                    {t.author}
+                  </Text>
                 </figcaption>
               </figure>
             </li>

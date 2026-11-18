@@ -6,7 +6,6 @@ export type NavItem = {
 export type SiteConfig = {
   brandName: string
   tagline: string
-  heroEyebrow: string
   heroHeadline: string
   heroSupport: string
   contactEmail: string
@@ -23,7 +22,6 @@ export type SiteConfig = {
 export const siteConfig: SiteConfig = {
   brandName: 'Aroma Verde',
   tagline: 'Incensos artesanais para acolher, purificar e prosperar.',
-  heroEyebrow: 'Aroma Verde',
   heroHeadline: 'Sinta o ritual. Sinta a unicidade.',
   heroSupport:
     'Incensos artesanais de ervas e resinas — acolher, purificar e prosperar no seu ritmo.',

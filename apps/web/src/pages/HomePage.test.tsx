@@ -26,7 +26,7 @@ describe('HomePage', () => {
     )
   })
 
-  it('marca aparece no header e no eyebrow do hero', () => {
+  it('marca aparece no header e no footer (sem eyebrow)', () => {
     renderAt('/')
     expect(
       screen.getByRole('link', { name: /Aroma Verde — início/i }),

@@ -1,27 +1,10 @@
-import cat1 from '../assets/earthware/cat-1.png'
-import cat2 from '../assets/earthware/cat-2.png'
-import cat3 from '../assets/earthware/cat-3.png'
-import cat4 from '../assets/earthware/cat-4.png'
-import feat1 from '../assets/earthware/feat-1.png'
-import feat2 from '../assets/earthware/feat-2.png'
-import blog1 from '../assets/earthware/blog-1.jpeg'
-import blog2 from '../assets/earthware/blog-2.jpeg'
-import partner1 from '../assets/earthware/partner-1.svg'
-import partner2 from '../assets/earthware/partner-2.svg'
-import partner3 from '../assets/earthware/partner-3.svg'
-import partner4 from '../assets/earthware/partner-4.svg'
-import aboutDot1 from '../assets/earthware/about-dot-1.png'
-import aboutDot2 from '../assets/earthware/about-dot-2.png'
-import aboutDot3 from '../assets/earthware/about-dot-3.png'
-import aboutIcon1 from '../assets/earthware/about-icon-1.svg'
-import aboutIcon2 from '../assets/earthware/about-icon-2.svg'
-import aboutIcon3 from '../assets/earthware/about-icon-3.svg'
+import { placeholder } from '../lib/placeholder'
 
 export const partners = [
-  { id: 'p1', name: 'Parceiro 1', logo: partner1 },
-  { id: 'p2', name: 'Parceiro 2', logo: partner2 },
-  { id: 'p3', name: 'Parceiro 3', logo: partner3 },
-  { id: 'p4', name: 'Parceiro 4', logo: partner4 },
+  { id: 'p1', name: 'Parceiro 1', logo: placeholder(160, 48, 'logo') },
+  { id: 'p2', name: 'Parceiro 2', logo: placeholder(160, 48, 'logo') },
+  { id: 'p3', name: 'Parceiro 3', logo: placeholder(160, 48, 'logo') },
+  { id: 'p4', name: 'Parceiro 4', logo: placeholder(160, 48, 'logo') },
 ] as const
 
 export const categoryCards = [
@@ -29,28 +12,28 @@ export const categoryCards = [
     id: 'acolher',
     name: 'Acolher',
     priceInCents: 2490,
-    image: cat1,
+    image: placeholder(224, 270, 'Acolher'),
     href: '/loja?intencao=acolher',
   },
   {
     id: 'purificar',
     name: 'Purificar',
     priceInCents: 2990,
-    image: cat2,
+    image: placeholder(224, 270, 'Purificar'),
     href: '/loja?intencao=purificar',
   },
   {
     id: 'prosperidade',
     name: 'Prosperar',
     priceInCents: 3290,
-    image: cat3,
+    image: placeholder(224, 270, 'Prosperar'),
     href: '/loja?intencao=prosperidade',
   },
   {
     id: 'conectar',
     name: 'Conectar',
     priceInCents: 2790,
-    image: cat4,
+    image: placeholder(224, 270, 'Conectar'),
     href: '/loja?intencao=conectar',
   },
 ] as const
@@ -60,30 +43,44 @@ export const aboutValues = [
     id: 'envio',
     title: 'Envio cuidadoso',
     text: 'Embalagem protegida para o incenso chegar inteiro e perfumado.',
-    dot: aboutDot1,
-    icon: aboutIcon1,
   },
   {
     id: 'qualidade',
     title: 'Qualidade artesanal',
     text: 'Ervas e resinas selecionadas, produzidas em pequenos lotes.',
-    dot: aboutDot2,
-    icon: aboutIcon2,
   },
   {
     id: 'compra',
     title: 'Compra segura',
     text: 'Finalize o pedido direto pelo WhatsApp, com atendimento humano.',
-    dot: aboutDot3,
-    icon: aboutIcon3,
   },
 ] as const
 
 export const featuredProducts = [
-  { id: 'f1', name: 'Ritual da manhã', priceInCents: 2490, image: feat1 },
-  { id: 'f2', name: 'Resina e sálvia', priceInCents: 3190, image: feat2 },
-  { id: 'f3', name: 'Caixa presente', priceInCents: 4590, image: cat3 },
-  { id: 'f4', name: 'Kit iniciação', priceInCents: 3890, image: cat4 },
+  {
+    id: 'f1',
+    name: 'Ritual da manhã',
+    priceInCents: 2490,
+    image: placeholder(240, 290, 'Ritual'),
+  },
+  {
+    id: 'f2',
+    name: 'Resina e sálvia',
+    priceInCents: 3190,
+    image: placeholder(240, 290, 'Resina'),
+  },
+  {
+    id: 'f3',
+    name: 'Caixa presente',
+    priceInCents: 4590,
+    image: placeholder(240, 290, 'Caixa'),
+  },
+  {
+    id: 'f4',
+    name: 'Kit iniciação',
+    priceInCents: 3890,
+    image: placeholder(240, 290, 'Kit'),
+  },
 ] as const
 
 export const testimonials = [
@@ -112,7 +109,7 @@ export const blogPosts = [
     id: 'b1',
     title: 'Como montar um altar de intenções em casa',
     excerpt: 'Passo a passo simples para criar um cantinho de presença.',
-    image: blog1,
+    image: placeholder(640, 480, 'Altar'),
     href: '/sobre',
     large: true,
   },
@@ -120,7 +117,7 @@ export const blogPosts = [
     id: 'b2',
     title: 'Resinas ou ervas: qual incenso escolher?',
     excerpt: 'Entenda as diferenças de aroma, fumaça e duração.',
-    image: blog2,
+    image: placeholder(640, 480, 'Resinas'),
     href: '/sobre',
     large: true,
   },
@@ -141,3 +138,8 @@ export const blogPosts = [
     large: false,
   },
 ] as const
+
+export const heroImage = {
+  src: placeholder(750, 500, 'Hero'),
+  alt: 'Peças artesanais em cerâmica e ritual — referência visual adaptada para a marca Aroma Verde.',
+}
