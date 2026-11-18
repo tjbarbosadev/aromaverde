@@ -6,6 +6,9 @@ const meta = {
   title: 'Atoms/Icon',
   component: Icon,
   tags: ['autodocs'],
+  parameters: {
+    controls: { exclude: ['icon'] },
+  },
 } satisfies Meta<typeof Icon>
 
 export default meta
@@ -13,9 +16,9 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Decorative: Story = {
-  args: { icon: Leaf, size: 28 },
+  render: () => <Icon icon={Leaf} size={28} />,
 }
 
 export const WithLabel: Story = {
-  args: { icon: ShoppingBag, label: 'Carrinho', size: 28 },
+  render: () => <Icon icon={ShoppingBag} label="Carrinho" size={28} />,
 }

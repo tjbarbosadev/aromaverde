@@ -6,6 +6,9 @@ const meta = {
   title: 'Organisms/ProductGrid',
   component: ProductGrid,
   tags: ['autodocs'],
+  parameters: {
+    controls: { exclude: ['children'] },
+  },
 } satisfies Meta<typeof ProductGrid>
 
 export default meta
@@ -19,17 +22,19 @@ const items = [
 ]
 
 export const Default: Story = {
-  args: {
-    children: items.map((item) => (
-      <li key={item.name}>
-        <ProductCard
-          name={item.name}
-          imageSrc={`https://placehold.it/400x300?text=${encodeURIComponent(item.name)}`}
-          imageAlt={item.name}
-          href={`/produto/${item.name}`}
-          priceInCents={item.price}
-        />
-      </li>
-    )),
-  },
+  render: () => (
+    <ProductGrid>
+      {items.map((item) => (
+        <li key={item.name}>
+          <ProductCard
+            name={item.name}
+            imageSrc={`https://placehold.co/400x300/e8ebe4/2d4a3e?text=${encodeURIComponent(item.name)}`}
+            imageAlt={item.name}
+            href={`/produto/${item.name}`}
+            priceInCents={item.price}
+          />
+        </li>
+      ))}
+    </ProductGrid>
+  ),
 }

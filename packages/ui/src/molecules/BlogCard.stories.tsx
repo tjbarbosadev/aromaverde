@@ -25,7 +25,7 @@ export const Large: Story = {
     excerpt: 'Passo a passo para um cantinho de presença.',
     author: 'Equipe Aroma Verde',
     date: '16 abr 2024',
-    imageSrc: 'https://placehold.it/640x384?text=Altar',
+    imageSrc: 'https://placehold.co/640x384/e8ebe4/2d4a3e?text=Altar',
     size: 'lg',
   },
 }
@@ -34,6 +34,6 @@ export const Small: Story = {
   args: {
     ...Large.args!,
     size: 'sm',
-    imageSrc: 'https://placehold.it/280x280?text=Post',
+    imageSrc: 'https://placehold.co/280x280/e8ebe4/2d4a3e?text=Post',
   },
 }

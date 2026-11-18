@@ -26,6 +26,6 @@ export const storyTeaser = {
 }
 
 export const heroImage = {
-  src: 'https://placehold.it/750x500?text=Aroma+Verde',
+  src: 'https://placehold.co/750x500/e8ebe4/2d4a3e?text=Aroma+Verde',
   alt: 'Incensos artesanais Aroma Verde — ervas e rituais feitos à mão.',
 }

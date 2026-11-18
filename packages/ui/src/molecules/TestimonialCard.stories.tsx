@@ -23,7 +23,7 @@ export const Cream: Story = {
     quote: 'O aroma preencheu a casa sem pesar.',
     author: 'Mariana S.',
     location: 'São Paulo, BR',
-    avatarSrc: 'https://placehold.it/96x96?text=MS',
+    avatarSrc: 'https://placehold.co/96x96/e8ebe4/2d4a3e?text=MS',
     tone: 'cream',
   },
 }

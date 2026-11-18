@@ -13,7 +13,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     name: 'Raio de Sol',
-    imageSrc: 'https://placehold.it/224x270?text=Raio',
+    imageSrc: 'https://placehold.co/224x270/e8ebe4/2d4a3e?text=Raio',
     imageAlt: 'Raio de Sol',
     href: '/produto/raio-de-sol',
     priceInCents: 2890,
