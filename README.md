@@ -6,13 +6,32 @@ Loja artesanal de incensos — [aromaverdeincensos.com.br](https://aromaverdeinc
 
 Specs / tasks / processo ficam **fora deste repo** (workspace local `docs/`). Este repositório é só código, CI e deploy.
 
-## Stack canônica
+## Stack
 
-**v1 (SPA):** Node.js 22 · TypeScript · React 19 · React Router · Zod · React Hook Form · Zustand · Vite · Tailwind CSS v4 · Vitest · Storybook  
+> Node · TypeScript · React · React Router · Zod · RHF · Zustand · Vite · Tailwind · Vitest · Storybook.  
+> Backend (fase posterior): Express · PostgreSQL · Docker.  
+> v1: SPA sem API.
 
-**Fase API (depois):** Express · PostgreSQL · Docker  
+**v1 (SPA):** Node.js 22 · TypeScript · React 19 · React Router · Zod · React Hook Form · Zustand · Vite · Tailwind CSS v4 · Vitest · Storybook
 
-**Infra:** Caddy (estático, espelho Maria Bonita) · Cloudflare · Verdaccio (lab npm) · `contato@` via Email Routing  
+**Fase API (depois):** Express · PostgreSQL · Docker
+
+**Infra:** Caddy (estático, espelho Maria Bonita) · Cloudflare · Verdaccio (lab npm) · `contato@` via Email Routing
+
+## Monorepo
+
+```bash
+npm install
+npm run dev          # apps/web → http://localhost:5173
+npm run storybook    # packages/ui → http://localhost:6006
+npm test
+npm run lint
+```
+
+| Pacote | Path | Papel |
+|--------|------|-------|
+| `@aromaverde/web` | `apps/web` | SPA da loja |
+| `@aromaverde/ui` | `packages/ui` | Design system + Storybook |
 
 ## Labels
 
@@ -28,4 +47,4 @@ Specs / tasks / processo ficam **fora deste repo** (workspace local `docs/`). Es
 
 ## Estado atual
 
-Código da app ainda não iniciado (aguardando liberação do gate 4 / task A0). Specs no workspace local.
+Scaffold A0: monorepo npm workspaces com `apps/web` + `packages/ui` (Storybook).
