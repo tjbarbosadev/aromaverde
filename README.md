@@ -40,11 +40,11 @@ npm run lint
 | `track:app` | Trilha A (app / DS) |
 | `track:infra` | Trilha I (homelab) |
 | `track:backlog` | Fora da v1 |
-| `phase:a0` … `phase:a9` | Tasks app |
+| `phase:a0` … `phase:a10` | Tasks app |
 | `phase:i1` … `phase:i5` | Tasks infra |
 | `gate:impl` | Pronto para implementação quando liberado |
 | `docs` | Documentação do **código** (README, etc.) — não specs de produto |
 
 ## Estado atual
 
-Scaffold A0: monorepo npm workspaces com `apps/web` + `packages/ui` (Storybook).
+Trilha A0–A9 em `main`. A10 (logo + favicons + deploy concurrency/OAuth): PR em andamento.

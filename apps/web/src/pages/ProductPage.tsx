@@ -22,7 +22,7 @@ export function ProductPage() {
 
   if (product === undefined) {
     return (
-      <div className="mx-auto max-w-[1200px] px-6 py-16">
+      <div className="mx-auto max-w-300 px-6 py-16">
         <Text tone="smoke">Carregando…</Text>
       </div>
     )
@@ -39,7 +39,7 @@ export function ProductPage() {
         description={product.shortDescription}
         path={`/produto/${product.slug}`}
       />
-      <article className="mx-auto grid max-w-[1200px] gap-10 px-6 py-12 md:grid-cols-2 md:px-12 md:py-16">
+      <article className="mx-auto grid max-w-300 gap-10 px-6 py-12 md:grid-cols-2 md:px-12 md:py-16">
         <div className="aspect-[4/5] overflow-hidden bg-cream">
           <img
             src={product.images[0]?.src}

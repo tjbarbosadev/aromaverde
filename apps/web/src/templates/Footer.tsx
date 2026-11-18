@@ -7,7 +7,7 @@ export function Footer() {
 
   return (
     <footer className="bg-ink text-white">
-      <div className="mx-auto grid max-w-[1200px] gap-12 px-12 py-16 md:grid-cols-4 md:gap-16 md:py-20">
+      <div className="mx-auto grid max-w-300 gap-12 px-12 py-16 md:grid-cols-4 md:gap-16 md:py-20">
         <div className="flex flex-col gap-4">
           <Heading level={3} className="text-2xl font-semibold text-white">
             {siteConfig.brandName}

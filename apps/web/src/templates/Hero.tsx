@@ -8,7 +8,7 @@ export const heroImageAlt = heroImage.alt
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-blush">
-      <div className="relative mx-auto flex max-w-[1200px] flex-col items-center gap-8 px-12 py-16 text-center md:gap-10 md:py-20">
+      <div className="relative mx-auto flex max-w-300 flex-col items-center gap-8 px-12 py-16 text-center md:gap-10 md:py-20">
         <div className="flex max-w-[36rem] flex-col items-center gap-3">
           <Heading
             level={1}
