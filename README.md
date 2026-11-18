@@ -1,9 +1,10 @@
 # Aroma Verde
 
-> Workspace local: `/home/thiago/Projects/aroma` (`docs/` → este diretório; git neste `project/`).
-
-
 Loja artesanal de incensos — [aromaverdeincensos.com.br](https://aromaverdeincensos.com.br) · [@aromaverde](https://www.instagram.com/aromaverde/)
+
+**Board:** [Project #2](https://github.com/users/tjbarbosadev/projects/2)
+
+Specs / tasks / processo ficam **fora deste repo** (workspace local `docs/`). Este repositório é só código, CI e deploy.
 
 ## Stack canônica
 
@@ -12,17 +13,6 @@ Loja artesanal de incensos — [aromaverdeincensos.com.br](https://aromaverdeinc
 **Fase API (depois):** Express · PostgreSQL · Docker  
 
 **Infra:** Caddy (estático, espelho Maria Bonita) · Cloudflare · Verdaccio (lab npm) · `contato@` via Email Routing  
-
-## Processo (spec-driven)
-
-| Gate | Doc |
-|------|-----|
-| 1 Especificação | [docs/PRD.md](docs/PRD.md) |
-| 2 Design / arquitetura | [docs/TECH_SPEC.md](docs/TECH_SPEC.md) |
-| 3 Decomposição | [docs/DECOMPOSICAO.md](docs/DECOMPOSICAO.md) + [docs/tasks/](docs/tasks/) |
-| 4+ Implementação | Issues no [Project #2](https://github.com/users/tjbarbosadev/projects/2) — começar por **A0** só com ok explícito |
-
-Infra: [docs/SERVER.md](docs/SERVER.md) · E-mail: [docs/EMAIL.md](docs/EMAIL.md) · Processo: [docs/PROCESS.md](docs/PROCESS.md)
 
 ## Labels
 
@@ -34,8 +24,8 @@ Infra: [docs/SERVER.md](docs/SERVER.md) · E-mail: [docs/EMAIL.md](docs/EMAIL.md
 | `phase:a0` … `phase:a9` | Tasks app |
 | `phase:i1` … `phase:i5` | Tasks infra |
 | `gate:impl` | Pronto para implementação quando liberado |
-| `docs` | Documentação |
+| `docs` | Documentação do **código** (README, etc.) — não specs de produto |
 
 ## Estado atual
 
-Repositório de **documentação e tracking**. Código da app ainda não iniciado (aguardando liberação do gate 4 / task A0).
+Código da app ainda não iniciado (aguardando liberação do gate 4 / task A0). Specs no workspace local.
