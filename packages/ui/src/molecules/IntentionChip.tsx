@@ -49,7 +49,8 @@ export function IntentionChip(props: IntentionChipProps) {
     )
   }
 
-  const { selected = false, children, className, onClick, ...buttonRest } = props
+  const { selected = false, children, className, onClick, ...buttonRest } =
+    props as IntentionChipButtonProps
   return (
     <button
       type="button"
