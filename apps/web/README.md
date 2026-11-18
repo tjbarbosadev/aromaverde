@@ -73,3 +73,8 @@ export default defineConfig([
 ])
 
 ```
+
+## Aroma Verde — notas
+
+- `VITE_WHATSAPP_E164`: número do WhatsApp em E.164. **Placeholder** (`+5500000000000`) até o número real ser informado.
+- Imagem do hero (`src/assets/hero-incense.jpg`): "Incense sticks" por vijay chennupati, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Incense_sticks_(5109967068).jpg). Trocar por foto própria da marca quando disponível.
